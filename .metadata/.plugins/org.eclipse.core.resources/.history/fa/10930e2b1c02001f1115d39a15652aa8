@@ -5,7 +5,7 @@ import game.GameplayPanel;
 import game.entities.ghosts.Ghost;
 import game.utils.Utils;
 
-// Hành động cụ thể của Inky (con ma xanh)
+//Stratégie concrète d'Inky (le fantôme bleu)
 public class InkyStrategy implements IGhostStrategy {
 	private Ghost otherGhost;
 
@@ -13,9 +13,9 @@ public class InkyStrategy implements IGhostStrategy {
 		this.otherGhost = ghost;
 	}
 
-	// Inky lợi dụng vị trí của Blinky để nhắm vào Pacman: chúng ta tấn công
-	// vectơ giữa vị trí của Blinky và hình vuông phía trước Pacman và thêm
-	// vectơ này ở vị trí một ô vuông phía trước Pacman để đạt được mục tiêu của Inky
+	// Inky se base sur la position de Blinky pour cibler Pacman : on prend un
+	// vecteur entre la position de Blinky et une case devant Pacman, et additionne
+	// ce vecteur à la position une case devant Pacman pour obtenir la cible d'Inky
 	@Override
 	public int[] getChaseTargetPosition() {
 		int[] position = new int[2];
@@ -32,7 +32,7 @@ public class InkyStrategy implements IGhostStrategy {
 		return position;
 	}
 
-	// Trong khi tạm dừng, Inky nhắm mục tiêu vào ô phía dưới bên phải
+	// En pause, Inky cible la case en bas à droite
 	@Override
 	public int[] getScatterTargetPosition() {
 		int[] position = new int[2];

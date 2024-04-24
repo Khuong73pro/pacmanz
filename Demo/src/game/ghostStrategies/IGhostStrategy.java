@@ -1,9 +1,9 @@
 package game.ghostStrategies;
 
-//Interface pour décrire les stratégies des différents fantômes
+// Giao diện mô tả hành động của các loại bóng ma khác nhau
 public interface IGhostStrategy {
-	int[] getChaseTargetPosition(); // Case ciblée lorsque le fantôme poursuit Pacman
+	int[] getChaseTargetPosition(); // Ô mục tiêu khi hồn ma đuổi theo Pacman
 
-	int[] getScatterTargetPosition(); // Case ciblée lorsque le fantôme fait une pause
+	int[] getScatterTargetPosition(); // Ô mục tiêu khi bóng ma tạm dừng
 
 }
